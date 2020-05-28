@@ -14,12 +14,16 @@ const styles = StyleSheet.create({
   },
   paragrafo: {
     fontSize: 12,
+  },
+  defaultPage: {
+    margin: 10,
+    padding: 10,
   }
 });
 
 // Create Document Component
 const MyDocument = () => (
-  <Document>
+  <Document title="Test Page PDF VIEWER">
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
         <Text>Section #1</Text>
@@ -28,6 +32,18 @@ const MyDocument = () => (
         </View>
       </View>
       <View style={styles.section}>
+        <Text>Section #2</Text>
+
+      </View>
+    </Page>
+    <Page size="A4" style={styles.defaultPage}>
+      <View>
+        <Text>Section #1</Text>
+        <View style={styles.paragrafo}>
+          <Text>Teste 001</Text>
+        </View>
+      </View>
+      <View>
         <Text>Section #2</Text>
 
       </View>
